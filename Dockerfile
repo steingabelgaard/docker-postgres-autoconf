@@ -1,5 +1,7 @@
 ARG BASE_TAG
 FROM docker.io/postgres:${BASE_TAG}
+RUN localedef -i da_DK -c -f UTF-8 -A /usr/share/locale/locale.alias da_DK.UTF-8
+ENV LANG da_DK.UTF-8
 ENTRYPOINT [ "/autoconf-entrypoint" ]
 CMD []
 ENV CERTS="{}" \
@@ -36,4 +38,4 @@ LABEL org.label-schema.vendor=Tecnativa \
       org.label-schema.license=Apache-2.0 \
       org.label-schema.build-date="$BUILD_DATE" \
       org.label-schema.vcs-ref="$VCS_REF" \
-      org.label-schema.vcs-url="https://github.com/Tecnativa/docker-postgres-autoconf"
+      org.label-schema.vcs-url="https://github.com/steingabelgaard/docker-postgres-autoconf"
