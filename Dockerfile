@@ -18,7 +18,7 @@ ENV CERTS="{}" \
     WAN_HBA_TPL="{connection} {db} {user} {cidr} {meth}" \
     WAN_TLS=1 \
     WAN_USERS='["all"]'
-RUN mpt update \
+RUN apt update \
     && mkdir -p /etc/postgres \
     && chmod a=rwx /etc/postgres
 RUN apt install python3-pip \
