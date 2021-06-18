@@ -56,15 +56,8 @@ jobs:
       # Test
       - run: ./tests/test.py -v
       # Push
-      - name: push to docker hub
-        if: github.repository == 'Tecnativa/docker-postgres-autoconf' && github.ref == 'refs/heads/master'
-        env:
-          REGISTRY_HOST: docker.io
-          REGISTRY_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
-          REGISTRY_USERNAME: ${{ secrets.DOCKERHUB_LOGIN }}
-        run: ./hooks/push
       - name: push to github registry
-        if: github.repository == 'Tecnativa/docker-postgres-autoconf' && github.ref == 'refs/heads/master'
+        if: github.repository == 'steingabelgaard/docker-postgres-autoconf' && github.ref == 'refs/heads/master'
         env:
           REGISTRY_HOST: ghcr.io
           REGISTRY_TOKEN: ${{ secrets.BOT_TOKEN }}
