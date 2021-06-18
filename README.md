@@ -105,4 +105,4 @@ Wether to enable or not TLS in WAN connections.
 
 Users allowed to connect from WAN.
 
-[`Dockerfile`]: https://github.com/Tecnativa/docker-postgres-autoconf/blob/master/Dockerfile
+[`Dockerfile`]: https://github.com/steingabelgaard/docker-postgres-autoconf/blob/master/Dockerfile
