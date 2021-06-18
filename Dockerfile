@@ -18,10 +18,10 @@ ENV CERTS="{}" \
     WAN_HBA_TPL="{connection} {db} {user} {cidr} {meth}" \
     WAN_TLS=1 \
     WAN_USERS='["all"]'
-RUN apt-get install --no-cache python3 \
+RUN apt-get install python3 \
     && mkdir -p /etc/postgres \
     && chmod a=rwx /etc/postgres
-RUN apt-get install --no-cache -t .build \
+RUN apt-get install \
         build-base \
         linux-headers \
         py3-pip \
