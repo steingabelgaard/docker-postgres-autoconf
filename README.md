@@ -1,6 +1,6 @@
 # PostgreSQL Auto-Conf
 
-[![Build Status](https://travis-ci.org/Tecnativa/docker-postgres-autoconf.svg?branch=master)](https://travis-ci.org/Tecnativa/docker-postgres-autoconf)
+[![Build Status](https://travis-ci.org/steingabelgaard/docker-postgres-autoconf.svg?branch=master)](https://travis-ci.org/steingabelgaard/docker-postgres-autoconf)
 [![Docker Pulls](https://img.shields.io/docker/pulls/tecnativa/postgres-autoconf.svg)](https://hub.docker.com/r/tecnativa/postgres-autoconf)
 [![Layers](https://images.microbadger.com/badges/image/tecnativa/postgres-autoconf.svg)](https://microbadger.com/images/tecnativa/postgres-autoconf)
 [![Commit](https://images.microbadger.com/badges/commit/tecnativa/postgres-autoconf.svg)](https://microbadger.com/images/tecnativa/postgres-autoconf)
