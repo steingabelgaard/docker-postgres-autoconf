@@ -44,7 +44,7 @@ jobs:
       LATEST_RELEASE: "14.0"
       # Variables found by default in Docker Hub builder
       DOCKER_REPO: tecnativa/postgres-autoconf
-      DOCKER_TAG: ${{ matrix.pg_version }}-alpine
+      DOCKER_TAG: ${{ matrix.pg_version }}
       GIT_SHA1: ${{ github.sha }}
     steps:
       # Prepare
