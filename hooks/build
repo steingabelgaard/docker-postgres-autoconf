@@ -18,6 +18,6 @@ docker[
     "--build-arg",
     "BASE_TAG={}".format(DOCKER_TAG),
     "--tag",
-    "tecnativa/postgres-autoconf:{}".format(DOCKER_TAG),
+    "steingabelgaard/postgres-autoconf:{}".format(DOCKER_TAG),
     ".",
 ] & FG
