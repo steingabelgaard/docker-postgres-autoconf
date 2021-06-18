@@ -21,10 +21,7 @@ ENV CERTS="{}" \
 RUN mkdir -p /etc/postgres \
     && chmod a=rwx /etc/postgres
 RUN apt-get install \
-        build-base \
-        linux-headers \
-        py3-pip \
-        python3-dev \
+        python3-pip \
     && pip3 install --no-cache-dir \
         netifaces \
     && apt-get clean
