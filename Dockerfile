@@ -18,8 +18,7 @@ ENV CERTS="{}" \
     WAN_HBA_TPL="{connection} {db} {user} {cidr} {meth}" \
     WAN_TLS=1 \
     WAN_USERS='["all"]'
-RUN apt-get install python3 \
-    && mkdir -p /etc/postgres \
+RUN mkdir -p /etc/postgres \
     && chmod a=rwx /etc/postgres
 RUN apt-get install \
         build-base \
