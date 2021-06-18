@@ -18,13 +18,13 @@ ENV CERTS="{}" \
     WAN_HBA_TPL="{connection} {db} {user} {cidr} {meth}" \
     WAN_TLS=1 \
     WAN_USERS='["all"]'
-RUN apt update \
+RUN apt update -y \
     && mkdir -p /etc/postgres \
     && chmod a=rwx /etc/postgres
-RUN apt install python3-pip \
+RUN apt install -y python3-pip \
     && pip3 install --no-cache-dir \
         netifaces \
-    && apt-get clean
+    && apt-get clean -y
 COPY autoconf-entrypoint /
 
 # Metadata
