@@ -18,10 +18,10 @@ ENV CERTS="{}" \
     WAN_HBA_TPL="{connection} {db} {user} {cidr} {meth}" \
     WAN_TLS=1 \
     WAN_USERS='["all"]'
-RUN mkdir -p /etc/postgres \
+RUN mpt update \
+    && mkdir -p /etc/postgres \
     && chmod a=rwx /etc/postgres
-RUN apt-get install \
-        python3-pip \
+RUN apt install python3-pip \
     && pip3 install --no-cache-dir \
         netifaces \
     && apt-get clean
