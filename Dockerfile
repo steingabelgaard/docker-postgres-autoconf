@@ -18,17 +18,17 @@ ENV CERTS="{}" \
     WAN_HBA_TPL="{connection} {db} {user} {cidr} {meth}" \
     WAN_TLS=1 \
     WAN_USERS='["all"]'
-RUN apk add --no-cache python3 \
+RUN apt-get install --no-cache python3 \
     && mkdir -p /etc/postgres \
     && chmod a=rwx /etc/postgres
-RUN apk add --no-cache -t .build \
+RUN apt-get install --no-cache -t .build \
         build-base \
         linux-headers \
         py3-pip \
         python3-dev \
     && pip3 install --no-cache-dir \
         netifaces \
-    && apk del .build
+    && apt-get clean
 COPY autoconf-entrypoint /
 
 # Metadata
